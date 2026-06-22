@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Take Park – Parking Aéroport Nantes Atlantique | Navette Incluse</title>
+  <meta name="description" content="Take Park : parking sécurisé à 10 min de l'aéroport Nantes Atlantique à Saint-Aignan-de-Grandlieu. Navette aller-retour incluse, ouvert 24h/24, tarifs dès 21€. Réservez en ligne." />
+  <meta name="keywords" content="parking aéroport Nantes, parking navette Nantes Atlantique, stationnement aéroport Nantes, parking pas cher Nantes Atlantique, Take Park Nantes, parking Saint-Aignan-de-Grandlieu, navette aéroport Nantes" />
+  <meta name="author" content="Take Park Nantes" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.takepark-nantes.fr/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.takepark-nantes.fr/" />
+  <meta property="og:title" content="Take Park – Parking Aéroport Nantes Atlantique | Navette Incluse" />
+  <meta property="og:description" content="Parking sécurisé à 10 min de l'aéroport Nantes Atlantique. Navette aller-retour incluse, 24h/24, tarifs dès 21€. Réservez en ligne en 2 minutes." />
+
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ParkingFacility",
+    "name": "Take Park Nantes",
+    "description": "Parking sécurisé avec navette aller-retour pour l'aéroport de Nantes Atlantique. Ouvert 24h/24, 7j/7. Tarifs à partir de 21€.",
+    "url": "https://www.takepark-nantes.fr",
+    "telephone": "+330600000000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "22 avenue de la Forêt",
+      "addressLocality": "Saint-Aignan-de-Grandlieu",
+      "postalCode": "44860",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 47.1175,
+      "longitude": -1.6211
+    },
+    "openingHours": "Mo-Su 00:00-24:00",
+    "priceRange": "€€",
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Navette aéroport", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Vidéosurveillance 24h/24", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Parking extérieur sécurisé", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Parking couvert disponible", "value": true}
+    ]
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --blue-900: #0B1F3A;
+      --blue-700: #1A3A6B;
+      --blue-500: #1E5CB3;
+      --blue-400: #2D72D9;
+      --blue-100: #E8F0FB;
+      --sky:       #5BA4F5;
+      --white:     #FFFFFF;
+      --gray-50:   #F7F9FC;
+      --gray-200:  #D1DAE8;
+      --gray-500:  #6B7A99;
+      --gray-800:  #1C2B45;
+      --green:     #22C55E;
+      --font-display: 'DM Sans', sans-serif;
+      --font-body:    'Inter', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--gray-800); background: var(--white); line-height: 1.6; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(11,31,58,0.96); backdrop-filter: blur(10px);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5vw; height: 64px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .nav-logo { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--white); letter-spacing: -0.02em; }
+    .nav-logo span { color: var(--sky); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--blue-400); color: var(--white); padding: 0.5rem 1.25rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: background .2s; }
+    .nav-cta:hover { background: var(--sky); }
+    @media (max-width: 640px) { .nav-links { display: none; } }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-700) 60%, #1a4a8a 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 100px 5vw 60px; position: relative; overflow: hidden;
+    }
+    .runway {
+      position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+      width: 6px; height: 45%;
+      background: repeating-linear-gradient(to bottom, rgba(255,255,255,0.15) 0px, rgba(255,255,255,0.15) 30px, transparent 30px, transparent 55px);
+    }
+    .runway::before, .runway::after { content: ''; position: absolute; top: 0; height: 100%; width: 6px; background: inherit; }
+    .runway::before { left: -80px; } .runway::after { right: -80px; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(93,164,245,0.15); border: 1px solid rgba(93,164,245,0.3);
+      color: var(--sky); padding: 0.35rem 1rem; border-radius: 999px;
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.5rem;
+    }
+    .hero-badge::before { content: '✈'; font-size: 0.9rem; }
+    .hero h1 { font-family: var(--font-display); font-size: clamp(2.2rem,5vw,4rem); font-weight: 700; color: var(--white); line-height: 1.15; letter-spacing: -0.02em; max-width: 700px; margin-bottom: 1.25rem; }
+    .hero h1 em { color: var(--sky); font-style: normal; }
+    .hero p { font-size: clamp(1rem,2vw,1.2rem); color: rgba(255,255,255,0.7); max-width: 520px; margin-bottom: 2.5rem; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    .btn-primary { background: var(--blue-400); color: var(--white); padding: 0.85rem 2rem; border-radius: 8px; font-weight: 700; font-size: 1rem; text-decoration: none; transition: background .2s, transform .15s; display: inline-block; }
+    .btn-primary:hover { background: var(--sky); transform: translateY(-1px); }
+    .btn-secondary { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: var(--white); padding: 0.85rem 2rem; border-radius: 8px; font-weight: 600; font-size: 1rem; text-decoration: none; transition: background .2s; display: inline-block; }
+    .btn-secondary:hover { background: rgba(255,255,255,0.14); }
+    .stats-strip { display: flex; gap: 0; flex-wrap: wrap; justify-content: center; margin-top: 4rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; max-width: 660px; width: 100%; }
+    .stat { flex: 1; min-width: 130px; padding: 1.25rem 1.5rem; text-align: center; border-right: 1px solid rgba(255,255,255,0.08); }
+    .stat:last-child { border-right: none; }
+    .stat-num { display: block; font-family: var(--font-display); font-size: 1.75rem; font-weight: 700; color: var(--sky); line-height: 1; }
+    .stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.55); margin-top: 0.25rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+    /* SECTIONS */
+    section { padding: 80px 5vw; }
+    .section-label { font-size: 0.75rem; font-weight: 700; color: var(--blue-400); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .section-title { font-family: var(--font-display); font-size: clamp(1.7rem,3vw,2.5rem); font-weight: 700; color: var(--blue-900); line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 1rem; }
+    .section-sub { font-size: 1rem; color: var(--gray-500); max-width: 560px; margin-bottom: 3rem; }
+
+    /* COMMENT CA MARCHE */
+    #comment-ca-marche { background: var(--gray-50); }
+    .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 2rem; }
+    .step { background: var(--white); border-radius: 12px; padding: 2rem; box-shadow: 0 1px 4px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04); position: relative; transition: box-shadow .2s; }
+    .step:hover { box-shadow: 0 4px 20px rgba(30,92,179,0.12); }
+    .step-icon { width: 48px; height: 48px; background: var(--blue-100); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1.25rem; }
+    .step h3 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--blue-900); margin-bottom: 0.5rem; }
+    .step p { font-size: 0.9rem; color: var(--gray-500); line-height: 1.5; }
+    .step-number { position: absolute; top: 1.25rem; right: 1.25rem; font-size: 0.7rem; font-weight: 700; color: var(--gray-200); letter-spacing: 0.05em; }
+
+    /* AVANTAGES */
+    #avantages { background: var(--white); }
+    .avantages-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1.5rem; }
+    .avantage-card { display: flex; gap: 1rem; align-items: flex-start; background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: 10px; padding: 1.5rem; transition: border-color .2s, box-shadow .2s; }
+    .avantage-card:hover { border-color: var(--blue-400); box-shadow: 0 2px 12px rgba(30,92,179,0.08); }
+    .av-icon { font-size: 1.5rem; flex-shrink: 0; width: 42px; height: 42px; background: var(--blue-100); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .avantage-card h4 { font-weight: 700; color: var(--blue-900); margin-bottom: 0.3rem; font-size: 0.95rem; }
+    .avantage-card p { font-size: 0.875rem; color: var(--gray-500); line-height: 1.5; }
+
+    /* TARIFS */
+    #tarifs { background: var(--blue-900); }
+    #tarifs .section-label { color: var(--sky); }
+    #tarifs .section-title { color: var(--white); }
+    #tarifs .section-sub { color: rgba(255,255,255,0.6); }
+
+    .prix-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0.6rem;
+    }
+    @media (max-width: 900px) { .prix-grid { grid-template-columns: repeat(4,1fr); } }
+    @media (max-width: 600px) { .prix-grid { grid-template-columns: repeat(3,1fr); } }
+
+    .prix-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 0.9rem 0.5rem;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color .15s, background .15s, transform .15s;
+    }
+    .prix-card:hover { border-color: var(--sky); background: rgba(93,164,245,0.1); transform: translateY(-2px); }
+    .prix-card.selected { background: var(--blue-500); border-color: var(--sky); transform: translateY(-2px); }
+    .prix-card.best { border-color: rgba(93,164,245,0.4); }
+    .prix-jours { font-size: 0.7rem; font-weight: 700; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
+    .prix-amount { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; color: var(--white); line-height: 1; }
+    .prix-amount span { font-size: 0.75rem; font-weight: 400; color: rgba(255,255,255,0.45); }
+    .prix-star { font-size: 0.65rem; color: var(--sky); margin-top: 0.2rem; }
+
+    /* RESERVATION */
+    #reservation { background: var(--blue-100); text-align: center; }
+    .resa-box { background: var(--white); border-radius: 16px; max-width: 560px; margin: 0 auto; padding: 2.5rem; box-shadow: 0 4px 30px rgba(30,92,179,0.1); }
+    .resa-box h2 { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; color: var(--blue-900); margin-bottom: 0.5rem; }
+    .resa-box p { font-size: 0.95rem; color: var(--gray-500); margin-bottom: 1.75rem; }
+    .form-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .form-group { flex: 1; min-width: 180px; margin-bottom: 1rem; text-align: left; }
+    .form-group label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--blue-900); margin-bottom: 0.35rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .form-group input, .form-group select { width: 100%; padding: 0.65rem 0.9rem; border: 1.5px solid var(--gray-200); border-radius: 7px; font-size: 0.9rem; color: var(--gray-800); font-family: var(--font-body); outline: none; transition: border-color .2s; }
+    .form-group input:focus, .form-group select:focus { border-color: var(--blue-400); }
+    .prix-calcule { background: var(--blue-100); border-radius: 8px; padding: 0.75rem 1rem; margin-bottom: 1rem; font-weight: 700; color: var(--blue-900); font-size: 1rem; display: none; text-align: center; }
+    .send-btns { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .btn-whatsapp, .btn-email { flex: 1; min-width: 140px; padding: 0.9rem; border: none; border-radius: 8px; font-size: 0.95rem; font-weight: 700; cursor: pointer; font-family: var(--font-body); transition: background .2s, transform .15s; display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-decoration: none; }
+    .btn-whatsapp { background: #25D366; color: var(--white); }
+    .btn-whatsapp:hover { background: #1ebe5c; transform: translateY(-1px); }
+    .btn-email { background: var(--blue-400); color: var(--white); }
+    .btn-email:hover { background: var(--blue-500); transform: translateY(-1px); }
+
+    /* FOOTER */
+    footer { background: var(--blue-900); color: rgba(255,255,255,0.5); text-align: center; padding: 2rem 5vw; font-size: 0.85rem; }
+    footer a { color: var(--sky); text-decoration: none; }
+    footer strong { color: var(--white); }
+
+    /* PHONE FLOATING */
+    .phone-bar { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 99; }
+    .phone-btn { background: var(--green); color: var(--white); padding: 0.75rem 1.25rem; border-radius: 999px; font-weight: 700; font-size: 0.9rem; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 20px rgba(34,197,94,0.4); transition: transform .2s; }
+    .phone-btn:hover { transform: scale(1.04); }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Take<span>Park</span> <span style="font-weight:300;font-size:0.9rem;color:rgba(255,255,255,0.4)">Nantes</span></div>
+  <ul class="nav-links">
+    <li><a href="#comment-ca-marche">Comment ça marche</a></li>
+    <li><a href="#avantages">Avantages</a></li>
+    <li><a href="#tarifs">Tarifs</a></li>
+  </ul>
+  <a href="#reservation" class="nav-cta">Réserver</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="runway"></div>
+  <div class="hero-badge">Aéroport Nantes Atlantique</div>
+  <h1>Partez serein.<br><em>On garde votre voiture.</em></h1>
+  <p>Parking sécurisé, navette rapide, tarifs imbattables. À 10 minutes de l'aéroport de Nantes Atlantique.</p>
+  <div class="hero-actions">
+    <a href="#reservation" class="btn-primary">Réserver ma place</a>
+    <a href="#tarifs" class="btn-secondary">Voir les tarifs</a>
+  </div>
+  <div class="stats-strip">
+    <div class="stat"><span class="stat-num">10'</span><div class="stat-label">De l'aéroport</div></div>
+    <div class="stat"><span class="stat-num">24/7</span><div class="stat-label">Navette disponible</div></div>
+    <div class="stat"><span class="stat-num">100%</span><div class="stat-label">Parking sécurisé</div></div>
+    <div class="stat"><span class="stat-num">4,9★</span><div class="stat-label">Satisfaction client</div></div>
+  </div>
+</section>
+
+<!-- TARIFS -->
+<section id="tarifs">
+  <div class="section-label">Tarification claire</div>
+  <h2 class="section-title">Nos tarifs</h2>
+  <p class="section-sub">Navette aller-retour incluse. Toute journée entamée est due, minimum 1 jour (24h). Cliquez sur une durée pour réserver directement.</p>
+  <div class="prix-grid" id="prixGrid"></div>
+  <p style="text-align:center;margin-top:1.5rem;font-size:0.82rem;color:rgba(255,255,255,0.4);">★ = tarif le plus demandé &nbsp;·&nbsp; Prix TTC, navette incluse</p>
+</section>
+
+<!-- COMMENT CA MARCHE -->
+<section id="comment-ca-marche">
+  <div class="section-label">Simple comme bonjour</div>
+  <h2 class="section-title">En 4 étapes chrono</h2>
+  <p class="section-sub">De chez vous à la porte d'embarquement, on s'occupe du reste.</p>
+  <div class="steps-grid">
+    <div class="step"><div class="step-number">01</div><div class="step-icon">📅</div><h3>Réservez en ligne</h3><p>Choisissez vos dates de départ et de retour. Confirmation par WhatsApp en 2 minutes.</p></div>
+    <div class="step"><div class="step-number">02</div><div class="step-icon">🚗</div><h3>Déposez votre véhicule</h3><p>Arrivez sur notre parking sécurisé. Notre équipe prend en charge votre voiture.</p></div>
+    <div class="step"><div class="step-number">03</div><div class="step-icon">🚐</div><h3>Navette directe</h3><p>Montez à bord, on vous dépose directement au terminal en moins de 15 minutes.</p></div>
+    <div class="step"><div class="step-number">04</div><div class="step-icon">🏠</div><h3>Retour clé en main</h3><p>À votre atterrissage, la navette vous récupère. Votre voiture vous attend.</p></div>
+  </div>
+</section>
+
+<!-- AVANTAGES -->
+<section id="avantages">
+  <div class="section-label">Pourquoi nous choisir</div>
+  <h2 class="section-title">Tranquillité d'esprit garantie</h2>
+  <p class="section-sub">Chaque détail est pensé pour que votre voyage commence et finisse sans stress.</p>
+  <div class="avantages-grid">
+    <div class="avantage-card"><div class="av-icon">🛡️</div><div><h4>Parking 100% sécurisé</h4><p>Vidéosurveillance 24h/24, clôture haute sécurité et gardien sur site.</p></div></div>
+    <div class="avantage-card"><div class="av-icon">⚡</div><div><h4>Navette toutes les 20 min</h4><p>Pas d'attente interminable. Notre navette tourne en continu aller-retour.</p></div></div>
+    <div class="avantage-card"><div class="av-icon">💶</div><div><h4>Prix imbattables</h4><p>Jusqu'à 60% moins cher que les parkings officiels de l'aéroport.</p></div></div>
+    <div class="avantage-card"><div class="av-icon">📲</div><div><h4>Réservation WhatsApp</h4><p>Réservez en ligne, confirmez par WhatsApp. Simple, rapide, sans prise de tête.</p></div></div>
+    <div class="avantage-card"><div class="av-icon">🔄</div><div><h4>Annulation gratuite</h4><p>Annulez gratuitement jusqu'à 48h avant votre départ. Sans frais, sans justification.</p></div></div>
+    <div class="avantage-card"><div class="av-icon">🌙</div><div><h4>Ouvert 24h/24, 7j/7</h4><p>Vol à 5h du matin ou retour à minuit ? On est là. Toujours.</p></div></div>
+  </div>
+</section>
+
+
+<!-- CARTE GPS -->
+<section id="acces" style="background:var(--gray-50);padding:80px 5vw;">
+  <div style="max-width:860px;margin:0 auto;">
+    <div class="section-label">Où nous trouver</div>
+    <h2 class="section-title">Accès au parking</h2>
+    <p class="section-sub">22 avenue de la Forêt, 44860 Saint-Aignan-de-Grandlieu · À 10 min de l'aéroport Nantes Atlantique</p>
+
+    <div style="border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.1);margin-bottom:1.5rem;">
+      <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-1.6438408%2C47.1386753%2C-1.6138408%2C47.1586753&layer=mapnik&marker=47.1486753%2C-1.6288408"
+        width="100%"
+        height="420"
+        style="border:0;display:block;"
+        allowfullscreen=""
+        loading="lazy"
+        title="Take Park Nantes - 22 avenue de la Forêt, Saint-Aignan-de-Grandlieu">
+      </iframe>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
+      <div style="background:var(--white);border:1px solid var(--gray-200);border-radius:10px;padding:1.25rem;display:flex;align-items:flex-start;gap:0.75rem;">
+        <span style="font-size:1.4rem;">📍</span>
+        <div>
+          <h4 style="font-size:0.875rem;font-weight:700;color:var(--blue-900);margin-bottom:0.2rem;">Adresse</h4>
+          <p style="font-size:0.825rem;color:var(--gray-500);line-height:1.5;">22 avenue de la Forêt<br>44860 Saint-Aignan-de-Grandlieu</p>
+        </div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--gray-200);border-radius:10px;padding:1.25rem;display:flex;align-items:flex-start;gap:0.75rem;">
+        <span style="font-size:1.4rem;">✈️</span>
+        <div>
+          <h4 style="font-size:0.875rem;font-weight:700;color:var(--blue-900);margin-bottom:0.2rem;">Distance aéroport</h4>
+          <p style="font-size:0.825rem;color:var(--gray-500);line-height:1.5;">10 minutes de l'aéroport<br>Nantes Atlantique</p>
+        </div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--gray-200);border-radius:10px;padding:1.25rem;display:flex;align-items:flex-start;gap:0.75rem;">
+        <span style="font-size:1.4rem;">🚗</span>
+        <div>
+          <h4 style="font-size:0.875rem;font-weight:700;color:var(--blue-900);margin-bottom:0.2rem;">Accès</h4>
+          <p style="font-size:0.825rem;color:var(--gray-500);line-height:1.5;">Depuis la N844<br>et la rocade nantaise</p>
+        </div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--gray-200);border-radius:10px;padding:1.25rem;display:flex;align-items:flex-start;gap:0.75rem;">
+        <span style="font-size:1.4rem;">🧭</span>
+        <div>
+          <h4 style="font-size:0.875rem;font-weight:700;color:var(--blue-900);margin-bottom:0.2rem;">GPS</h4>
+          <a href="https://www.openstreetmap.org/?mlat=47.1486753&mlon=-1.6288408&zoom=16"  target="_blank" style="font-size:0.825rem;color:var(--blue-400);font-weight:600;text-decoration:none;">Ouvrir dans Google Maps →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVATION -->
+<section id="reservation">
+  <div class="resa-box">
+    <h2>Réservez votre place</h2>
+    <p>Remplissez le formulaire, on vous recontacte sur WhatsApp pour confirmer.</p>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Date &amp; heure de départ</label>
+        <input type="datetime-local" id="dateDepart" oninput="calculerPrix()" />
+      </div>
+      <div class="form-group">
+        <label>Date &amp; heure de retour</label>
+        <input type="datetime-local" id="dateRetour" oninput="calculerPrix()" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Heure de dépose</label>
+        <input type="time" id="heureDepose" />
+      </div>
+      <div class="form-group">
+        <label>Immatriculation</label>
+        <input type="text" id="immat" placeholder="AA-123-BB" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Votre prénom</label>
+      <input type="text" id="prenom" placeholder="Jean" />
+    </div>
+    <div class="form-group">
+      <label>Services optionnels</label>
+      <select id="services_option">
+        <option value="">Aucun service supplémentaire</option>
+        <option value="Lavage extérieur (+25€)">🧹 Lavage extérieur (+25€)</option>
+        <option value="Nettoyage intérieur complet (+35€)">🧹 Nettoyage intérieur complet (+35€)</option>
+        <option value="Pack nettoyage complet (+55€)">🧹 Pack nettoyage complet int. + ext. (+55€)</option>
+        <option value="Remplacement pare-brise (bris de glace)">🪟 Remplacement pare-brise (bris de glace)</option>
+        <option value="Nettoyage complet + Pare-brise">🧹🪟 Nettoyage + Pare-brise</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Votre téléphone</label>
+      <input type="tel" id="telephone" placeholder="06 12 34 56 78" />
+    </div>
+    <div class="prix-calcule" id="prixCalc"></div>
+    <div class="send-btns">
+      <a href="#" class="btn-whatsapp" onclick="envoyerWhatsapp(event)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a href="#" class="btn-email" onclick="envoyerEmail(event)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        Email
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- REASSURANCE + SEO SERVICES -->
+<section style="background:var(--blue-900);padding:70px 5vw;">
+  <div style="max-width:860px;margin:0 auto;text-align:center;">
+
+    <div style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(93,164,245,0.15);border:1px solid rgba(93,164,245,0.3);color:var(--sky);padding:0.4rem 1.1rem;border-radius:999px;font-size:0.8rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:1.5rem;">
+      🔒 Votre véhicule reste chez nous
+    </div>
+
+    <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;color:var(--white);line-height:1.2;margin-bottom:1.25rem;">
+      Votre voiture ne quitte <em style="color:var(--sky);font-style:normal;">jamais</em> le parking
+    </h2>
+
+    <p style="font-size:1.05rem;color:rgba(255,255,255,0.7);max-width:620px;margin:0 auto 3rem;line-height:1.8;">
+      Tous nos services — nettoyage, remplacement de pare-brise — sont réalisés <strong style="color:var(--white);">directement sur place</strong>, dans notre parking sécurisé de Saint-Aignan-de-Grandlieu. Votre véhicule ne bouge pas. Vous partez l'esprit tranquille, vous rentrez avec une voiture en parfait état.
+    </p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:3rem;">
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1.5rem;text-align:center;">
+        <div style="font-size:2rem;margin-bottom:0.75rem;">🅿️</div>
+        <h4 style="font-family:var(--font-display);color:var(--white);font-size:0.95rem;font-weight:700;margin-bottom:0.4rem;">Voiture sur place</h4>
+        <p style="font-size:0.8rem;color:rgba(255,255,255,0.5);line-height:1.5;">Votre véhicule reste dans notre enceinte sécurisée du début à la fin</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1.5rem;text-align:center;">
+        <div style="font-size:2rem;margin-bottom:0.75rem;">👷</div>
+        <h4 style="font-family:var(--font-display);color:var(--white);font-size:0.95rem;font-weight:700;margin-bottom:0.4rem;">Techniciens certifiés</h4>
+        <p style="font-size:0.8rem;color:rgba(255,255,255,0.5);line-height:1.5;">Nos intervenants sont qualifiés et agréés pour chaque prestation</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1.5rem;text-align:center;">
+        <div style="font-size:2rem;margin-bottom:0.75rem;">📸</div>
+        <h4 style="font-family:var(--font-display);color:var(--white);font-size:0.95rem;font-weight:700;margin-bottom:0.4rem;">Photos avant/après</h4>
+        <p style="font-size:0.8rem;color:rgba(255,255,255,0.5);line-height:1.5;">Un rapport photo vous est envoyé par WhatsApp après chaque intervention</p>
+      </div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:1.5rem;text-align:center;">
+        <div style="font-size:2rem;margin-bottom:0.75rem;">✅</div>
+        <h4 style="font-family:var(--font-display);color:var(--white);font-size:0.95rem;font-weight:700;margin-bottom:0.4rem;">Prêt à votre retour</h4>
+        <p style="font-size:0.8rem;color:rgba(255,255,255,0.5);line-height:1.5;">Tout est terminé avant votre atterrissage. Vous repartez directement.</p>
+      </div>
+    </div>
+
+    <!-- Bloc SEO texte -->
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:2rem;text-align:left;">
+      <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--sky);margin-bottom:1rem;">Nettoyage auto & remplacement pare-brise à l'aéroport de Nantes Atlantique</h3>
+      <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);line-height:1.8;margin-bottom:1rem;">
+        Take Park propose une solution unique aux voyageurs au départ de <strong style="color:rgba(255,255,255,0.85);">Nantes Atlantique</strong> : faire entretenir leur véhicule pendant leur absence, sans déplacement supplémentaire. Notre service de <strong style="color:rgba(255,255,255,0.85);">nettoyage auto professionnel</strong> comprend le lavage extérieur, l'aspiration intérieure, le dépoussiérage du tableau de bord et le nettoyage des vitres.
+      </p>
+      <p style="font-size:0.875rem;color:rgba(255,255,255,0.6);line-height:1.8;">
+        Notre service de <strong style="color:rgba(255,255,255,0.85);">remplacement de pare-brise</strong> est réalisé directement sur le parking par des techniciens agréés. Nous gérons la <strong style="color:rgba(255,255,255,0.85);">prise en charge assurance bris de glace</strong> à votre place : déclaration, suivi du dossier et facturation auprès de votre assureur. Un service disponible pour tous les véhicules, toutes marques confondues, à <strong style="color:rgba(255,255,255,0.85);">Saint-Aignan-de-Grandlieu</strong> près de Nantes.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICES ADDITIONNELS -->
+<section id="services" style="background:var(--white);padding:80px 5vw;">
+  <div class="section-label">En option</div>
+  <h2 class="section-title">Services pendant votre absence</h2>
+  <p class="section-sub">Profitez de votre voyage pour rentrer avec une voiture comme neuve. Nos équipes s'en occupent pendant que vous êtes en vacances.</p>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;">
+
+    <!-- CARTE NETTOYAGE -->
+    <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:16px;overflow:hidden;transition:box-shadow .2s,transform .2s;" onmouseover="this.style.boxShadow='0 8px 32px rgba(30,92,179,0.13)';this.style.transform='translateY(-3px)'" onmouseout="this.style.boxShadow='none';this.style.transform='none'">
+      <div style="position:relative;height:200px;overflow:hidden;">
+        <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=600&q=80" alt="Nettoyage professionnel voiture" alt="Nettoyage professionnel voiture" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='var(--blue-100)';this.style.display='none'" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,31,58,0.7) 0%,transparent 60%);"></div>
+        <div style="position:absolute;bottom:1rem;left:1rem;">
+          <span style="background:var(--blue-400);color:var(--white);font-size:0.75rem;font-weight:700;padding:0.3rem 0.75rem;border-radius:999px;">Service optionnel</span>
+        </div>
+      </div>
+      <div style="padding:1.75rem;">
+        <h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--blue-900);margin-bottom:0.5rem;">🧹 Nettoyage intérieur & extérieur</h3>
+        <p style="font-size:0.875rem;color:var(--gray-500);line-height:1.7;margin-bottom:1.25rem;">Votre véhicule est nettoyé pendant votre absence et vous attend impeccable à votre retour. Lavage extérieur, aspiration intérieure, vitres et tableau de bord.</p>
+        <div style="display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1.5rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0.9rem;background:var(--white);border-radius:8px;border:1px solid var(--gray-200);">
+            <span style="font-size:0.85rem;color:var(--gray-800);">Lavage extérieur</span>
+            <strong style="color:var(--blue-900);">25 €</strong>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0.9rem;background:var(--white);border-radius:8px;border:1px solid var(--gray-200);">
+            <span style="font-size:0.85rem;color:var(--gray-800);">Nettoyage intérieur complet</span>
+            <strong style="color:var(--blue-900);">35 €</strong>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0.9rem;background:var(--blue-100);border-radius:8px;border:1px solid var(--blue-400);">
+            <span style="font-size:0.85rem;font-weight:700;color:var(--blue-900);">⭐ Pack complet int. + ext.</span>
+            <strong style="color:var(--blue-500);">55 €</strong>
+          </div>
+        </div>
+        <a href="#reservation" style="display:block;text-align:center;background:var(--blue-400);color:var(--white);padding:0.75rem;border-radius:8px;font-size:0.9rem;font-weight:700;text-decoration:none;">Ajouter à ma réservation →</a>
+      </div>
+    </div>
+
+    <!-- CARTE BRIS DE GLACE -->
+    <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:16px;overflow:hidden;transition:box-shadow .2s,transform .2s;" onmouseover="this.style.boxShadow='0 8px 32px rgba(217,119,6,0.13)';this.style.transform='translateY(-3px)'" onmouseout="this.style.boxShadow='none';this.style.transform='none'">
+      <div style="position:relative;height:200px;overflow:hidden;">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Remplacement pare-brise professionnel" alt="Remplacement pare-brise professionnel" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='#FEF3C7';this.style.display='none'" />
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(120,53,15,0.6) 0%,transparent 60%);"></div>
+        <div style="position:absolute;bottom:1rem;left:1rem;">
+          <span style="background:#D97706;color:var(--white);font-size:0.75rem;font-weight:700;padding:0.3rem 0.75rem;border-radius:999px;">Prise en charge assurance possible</span>
+        </div>
+      </div>
+      <div style="padding:1.75rem;">
+        <h3 style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--blue-900);margin-bottom:0.5rem;">🪟 Remplacement pare-brise</h3>
+        <p style="font-size:0.875rem;color:var(--gray-500);line-height:1.7;margin-bottom:1.25rem;">Un impact ou une fissure ? Profitez de votre voyage pour le faire remplacer. On gère tout : remplacement et démarches assurance bris de glace.</p>
+        <div style="display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1.5rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0.9rem;background:var(--white);border-radius:8px;border:1px solid var(--gray-200);">
+            <span style="font-size:0.85rem;color:var(--gray-800);">Réparation impact (pastille)</span>
+            <strong style="color:var(--blue-900);">Offert avec assurance</strong>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:0.55rem 0.9rem;background:var(--white);border-radius:8px;border:1px solid var(--gray-200);">
+            <span style="font-size:0.85rem;color:var(--gray-800);">Remplacement pare-brise complet</span>
+            <strong style="color:var(--blue-900);">Selon véhicule</strong>
+          </div>
+          <div style="padding:0.55rem 0.9rem;background:#FEF9E7;border-radius:8px;border:1px solid #F59E0B;">
+            <span style="font-size:0.8rem;color:#92400E;">✅ Démarches assurance bris de glace gérées par nos soins</span>
+          </div>
+        </div>
+        <a href="#reservation" style="display:block;text-align:center;background:#D97706;color:var(--white);padding:0.75rem;border-radius:8px;font-size:0.9rem;font-weight:700;text-decoration:none;">Ajouter à ma réservation →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SEO CONTENT -->
+<section id="seo-content" style="background:var(--gray-50);padding:60px 5vw;">
+  <div style="max-width:860px;margin:0 auto;">
+    <h2 style="font-family:var(--font-display);font-size:1.6rem;font-weight:700;color:var(--blue-900);margin-bottom:1rem;">Parking aéroport Nantes Atlantique avec navette – Take Park</h2>
+    <p style="color:var(--gray-500);margin-bottom:1.25rem;line-height:1.8;">
+      Vous recherchez un <strong>parking pas cher près de l'aéroport de Nantes Atlantique</strong> ? Take Park est la solution idéale pour les voyageurs au départ de Nantes. Situé à <strong>Saint-Aignan-de-Grandlieu</strong>, à seulement 10 minutes de l'aéroport, notre parking privé sécurisé vous permet de laisser votre voiture en toute confiance pendant toute la durée de votre voyage.
+    </p>
+    <p style="color:var(--gray-500);margin-bottom:1.25rem;line-height:1.8;">
+      Notre <strong>navette aéroport Nantes</strong> est incluse dans tous nos tarifs et fonctionne 24h/24, 7j/7. Que vous partiez à l'aube ou rentriez en pleine nuit, notre équipe est là pour vous déposer et vous récupérer directement au terminal de <strong>Nantes Atlantique</strong>.
+    </p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin:2rem 0;">
+      <div style="background:var(--white);border-radius:10px;padding:1.5rem;border:1px solid var(--gray-200);">
+        <h3 style="font-size:1rem;font-weight:700;color:var(--blue-900);margin-bottom:0.5rem;">🅿️ Parking sécurisé Nantes Atlantique</h3>
+        <p style="font-size:0.875rem;color:var(--gray-500);line-height:1.6;">Vidéosurveillance permanente, clôture sécurisée et gardien sur site. Votre véhicule est protégé 24h/24 pendant toute la durée de votre absence, que ce soit pour un week-end ou plusieurs semaines.</p>
+      </div>
+      <div style="background:var(--white);border-radius:10px;padding:1.5rem;border:1px solid var(--gray-200);">
+        <h3 style="font-size:1rem;font-weight:700;color:var(--blue-900);margin-bottom:0.5rem;">🚐 Navette privée aéroport Nantes</h3>
+        <p style="font-size:0.875rem;color:var(--gray-500);line-height:1.6;">Notre navette privée vous conduit directement au terminal en moins de 15 minutes. Au retour, elle vous attend dès votre atterrissage. Plus besoin de taxi ou de transports en commun depuis l'aéroport Nantes Atlantique.</p>
+      </div>
+      <div style="background:var(--white);border-radius:10px;padding:1.5rem;border:1px solid var(--gray-200);">
+        <h3 style="font-size:1rem;font-weight:700;color:var(--blue-900);margin-bottom:0.5rem;">💶 Tarifs parking Nantes moins chers</h3>
+        <p style="font-size:0.875rem;color:var(--gray-500);line-height:1.6;">Nos tarifs démarrent à <strong>21 € pour 1 jour</strong> et descendent jusqu'à <strong>194 € pour 30 jours</strong>, navette incluse. Jusqu'à 60% d'économie par rapport aux parkings officiels de l'aéroport de Nantes.</p>
+      </div>
+    </div>
+
+    <h3 style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--blue-900);margin:2rem 0 0.75rem;">Comment réserver votre parking à Nantes Atlantique ?</h3>
+    <p style="color:var(--gray-500);margin-bottom:1rem;line-height:1.8;">
+      La réservation de votre place de parking se fait entièrement en ligne, en moins de 2 minutes. Choisissez vos dates de départ et de retour, renseignez votre immatriculation, puis envoyez votre demande par <strong>WhatsApp ou email</strong>. Nous confirmons votre réservation rapidement et vous recevez toutes les informations pour le jour J.
+    </p>
+
+    <h3 style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--blue-900);margin:2rem 0 0.75rem;">Où se trouve Take Park à Saint-Aignan-de-Grandlieu ?</h3>
+    <p style="color:var(--gray-500);line-height:1.8;">
+      Take Park est situé au <strong>22 avenue de la Forêt, 44860 Saint-Aignan-de-Grandlieu</strong>, à moins de 10 minutes en voiture de l'aéroport international de Nantes Atlantique. Notre emplacement stratégique vous permet d'éviter les embouteillages et le stress du stationnement à l'aéroport. Accessible depuis la N844 et la rocade nantaise.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p style="margin-bottom:0.5rem"><strong>Take Park Nantes</strong> · 22 avenue de la Forêt, 44860 Saint-Aignan-de-Grandlieu</p>
+  <p>📞 <a href="tel:+330600000000">06 00 00 00 00</a> &nbsp;|&nbsp; ✉ <a href="mailto:contact@takepark-nantes.fr">contact@takepark-nantes.fr</a></p>
+  <p style="margin-top:1rem;font-size:0.75rem">© 2026 Take Park Nantes — Tous droits réservés</p>
+</footer>
+
+<!-- PHONE FLOATING -->
+<div class="phone-bar">
+  <a href="tel:+330600000000" class="phone-btn">📞 06 00 00 00 00</a>
+</div>
+
+<script>
+  // Tarifs de référence (concurrence) avec -10%
+  const tarifsBruts = [23,32,38,46,52,56,58,62,64,70,75,83,97,102,107,115,123,130,138,146,151,158,164,176,183,189,194,202,210,215];
+  const bestSellers = [7,14,21,30]; // jours les plus demandés (index base 1)
+  const TEL = "330600000000";
+
+  // Générer la grille de prix
+  function genererGrille() {
+    const grid = document.getElementById('prixGrid');
+    tarifsBruts.forEach((brut, i) => {
+      const jours = i + 1;
+      const prix = Math.round(brut * 0.9);
+      const isBest = bestSellers.includes(jours);
+      const card = document.createElement('div');
+      card.className = 'prix-card' + (isBest ? ' best' : '');
+      card.dataset.jours = jours;
+      card.dataset.prix = prix;
+      card.innerHTML = `
+        <div class="prix-jours">${jours} JOUR${jours > 1 ? 'S' : ''}</div>
+        <div class="prix-amount">${prix}<span> €</span></div>
+        <div class="prix-amount" style="font-size:0.65rem;color:rgba(255,255,255,0.3);font-weight:400;text-decoration:line-through;">${brut}€</div>
+        ${isBest ? '<div class="prix-star">★</div>' : ''}
+      `;
+      card.addEventListener('click', () => selectionnerDuree(jours, prix));
+      grid.appendChild(card);
+    });
+  }
+
+  function selectionnerDuree(jours, prix) {
+    document.querySelectorAll('.prix-card').forEach(c => c.classList.remove('selected'));
+    const card = document.querySelector(`.prix-card[data-jours="${jours}"]`);
+    if (card) card.classList.add('selected');
+    // Scroller vers réservation
+    document.getElementById('reservation').scrollIntoView({ behavior: 'smooth' });
+    afficherPrix(jours, prix);
+  }
+
+  function calculerPrix() {
+    const dep = document.getElementById('dateDepart').value;
+    const ret = document.getElementById('dateRetour').value;
+    if (!dep || !ret) return;
+    const d1 = new Date(dep), d2 = new Date(ret);
+    const diff = Math.max(1, Math.round((d2 - d1) / 86400000));
+    if (diff < 1 || diff > 30) return;
+    const prix = Math.round(tarifsBruts[diff - 1] * 0.9);
+    afficherPrix(diff, prix);
+    // Mettre en surbrillance la carte correspondante
+    document.querySelectorAll('.prix-card').forEach(c => c.classList.remove('selected'));
+    const card = document.querySelector(`.prix-card[data-jours="${diff}"]`);
+    if (card) card.classList.add('selected');
+  }
+
+  function afficherPrix(jours, prix) {
+    const bloc = document.getElementById('prixCalc');
+    bloc.style.display = 'block';
+    bloc.innerHTML = `🅿️ ${jours} jour${jours>1?'s':''} · <strong style="color:var(--blue-500);font-size:1.2rem">${prix} € TTC</strong> · Navette incluse`;
+  }
+
+  function envoyerWhatsapp(e) {
+    e.preventDefault();
+    const dep    = document.getElementById('dateDepart').value;
+    const ret    = document.getElementById('dateRetour').value;
+    const depVal = document.getElementById('dateDepart').value;
+    const retVal = document.getElementById('dateRetour').value;
+    const heure = depVal ? depVal.split('T')[1] : '';
+    const immat  = document.getElementById('immat').value;
+    const prenom = document.getElementById('prenom').value;
+    const tel    = document.getElementById('telephone').value;
+
+    if (!dep || !ret) { alert('Veuillez renseigner les dates de départ et de retour.'); return; }
+
+    const diff = Math.max(1, Math.round((new Date(ret) - new Date(dep)) / 86400000));
+    const prix = diff <= 30 ? Math.round(tarifsBruts[diff - 1] * 0.9) : '—';
+
+    const msg = encodeURIComponent(
+      `Bonjour Take Park 👋\n\n` +
+      `📅 Départ : ${depVal ? depVal.replace('T', ' à ') : dep}\n` +
+      `📅 Retour : ${ret}\n` +
+      `🚗 Immat : ${immat || 'non renseignée'}\n` +
+      `👤 Prénom : ${prenom || 'non renseigné'}\n` +
+      `📞 Tél : ${tel || 'non renseigné'}\n` +
+      `💶 Durée : ${diff} jour${diff>1?'s':''} → ${prix} € TTC\n\n` +
+      `Merci de confirmer ma réservation !`
+    );
+    window.open(`https://wa.me/${TEL}?text=${msg}`, '_blank');
+  }
+
+  function envoyerEmail(e) {
+    e.preventDefault();
+    const dep    = document.getElementById('dateDepart').value;
+    const ret    = document.getElementById('dateRetour').value;
+    const immat  = document.getElementById('immat').value;
+    const prenom = document.getElementById('prenom').value;
+    const tel    = document.getElementById('telephone').value;
+    if (!dep || !ret) { alert('Veuillez renseigner les dates de départ et de retour.'); return; }
+    const diff = Math.max(1, Math.round((new Date(ret) - new Date(dep)) / 86400000));
+    const prix = diff <= 30 ? Math.round(tarifsBruts[diff - 1] * 0.9) : '—';
+    const sujet = encodeURIComponent('Demande de réservation Take Park Nantes');
+    const corps = encodeURIComponent(
+      'Bonjour Take Park,\n\n' +
+      'Départ : ' + dep.replace('T', ' à ') + '\n' +
+      'Retour : ' + ret.replace('T', ' à ') + '\n' +
+      'Immatriculation : ' + (immat || 'non renseignée') + '\n' +
+      'Prénom : ' + (prenom || 'non renseigné') + '\n' +
+      'Téléphone : ' + (tel || 'non renseigné') + '\n' +
+      'Durée : ' + diff + ' jour' + (diff>1?'s':'') + ' → ' + prix + ' € TTC\n\n' +
+      'Service optionnel : ' + (document.getElementById('services_option').value || 'Aucun') + '\n\n' +
+      'Merci de confirmer ma réservation.'
+    );
+    window.location.href = 'mailto:contact@takepark-nantes.fr?subject=' + sujet + '&body=' + corps;
+  }
+
+  genererGrille();
+
+  // Pré-remplir dates : aujourd'hui et J+7, heure actuelle arrondie à la demi-heure
+  (function() {
+    const now = new Date();
+    now.setSeconds(0, 0);
+    const mins = now.getMinutes();
+    now.setMinutes(mins < 30 ? 30 : 60, 0, 0);
+    if (now.getMinutes() === 0) now.setHours(now.getHours()); // overflow géré
+    const ret = new Date(now.getTime() + 7 * 24 * 3600 * 1000);
+    function toLocal(d) {
+      const pad = n => String(n).padStart(2, '0');
+      return d.getFullYear() + '-' + pad(d.getMonth()+1) + '-' + pad(d.getDate()) + 'T' + pad(d.getHours()) + ':' + pad(d.getMinutes());
+    }
+    document.getElementById('dateDepart').value = toLocal(now);
+    document.getElementById('dateRetour').value = toLocal(ret);
+    calculerPrix();
+  })();
+</script>
+</body>
+</html>
